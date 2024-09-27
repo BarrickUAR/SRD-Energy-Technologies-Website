@@ -57,7 +57,7 @@ span {
 }
 
 .container {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -66,17 +66,17 @@ header {
   background-size: cover;
   background-position: center;
   height: 900px;
-  background-color: #004884;
+  background-color: #006c8b;
   color: #f2f2f2;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .Navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  color: #004884;
+  color: #006c8b;
   font-weight: bold;
   letter-spacing: 1px;
   display: flex;
@@ -129,6 +129,43 @@ header {
   }
 }
 
+.Introduction {
+  padding: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 100px;
+  text-align: center;
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 100px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+
+  img {
+    background: none;
+    border-radius: 12px;
+    pointer-events: none;
+  }
+}
+
 .About {
   scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
   padding-block: 20px;
@@ -144,8 +181,9 @@ header {
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #004884;
+    color: #006c8b;
     user-select: none;
+    margin-bottom: 50px;
   }
 
   p {
@@ -153,7 +191,7 @@ header {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: #004884;
+    color: #006c8b;
     width: 1110px;
     margin-bottom: 8px;
     width: 800px;
@@ -161,6 +199,7 @@ header {
   }
 
   img {
+    background: none;
     border-radius: 12px;
     pointer-events: none;
   }
@@ -172,7 +211,7 @@ header {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #004884;
+  color: #006c8b;
   margin-bottom: 20px;
   user-select: none;
 }
@@ -183,8 +222,9 @@ header {
   align-content: center;
   padding: 30px;
   gap: 50px;
+  margin-bottom: 100px;
   grid-template-columns: repeat(2, 1fr);
-  color: #004884;
+  color: #006c8b;
 }
 
 .Problem-Item {
@@ -196,6 +236,7 @@ header {
   padding: 30px;
   border-radius: 14px;
   box-shadow: 0 3px 12px rgba(6, 11, 47, 0.06);
+  text-align: center;
 
   img {
     width: 100%;
@@ -207,7 +248,7 @@ header {
     font-size: 24px;
     font-weight: bolder;
     letter-spacing: 1px;
-    color: #004884;
+    color: #006c8b;
     margin-bottom: 16px;
   }
 
@@ -216,9 +257,9 @@ header {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    line-height: 1.5;
-    color: #004884;
+    color: #006c8b;
     margin-bottom: 8px;
+    text-align: center;
   }
 }
 
@@ -226,4 +267,173 @@ header {
   transform: translateY(-6px);
   box-shadow: 0 5px 18px rgba(71, 69, 99, 0.4);
   transition: all 0.5s;
+}
+
+/* Langugage Select */
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #006c8b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Langugage Select */
+
+.Why {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+
+  #EuPhoto img {
+    margin-left: 50px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+}
+
+.WhyHeading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #006c8b;
+  margin-bottom: 50px;
+  user-select: none;
+}
+
+.HowWeSolve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 100px;
+  img {
+    border-radius: 14px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+}
+
+.Solitions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.OurSolition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
 }
