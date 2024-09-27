@@ -17,11 +17,22 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  pointer-events: none;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  user-select: none;
 }
 
 a {
@@ -46,7 +57,7 @@ span {
 }
 
 .container {
-  max-width: 1920px;
+  width: 1920px;
   margin: 0 auto;
 }
 
@@ -54,7 +65,7 @@ header {
   background-image: url(/assets/images/Boat6.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 900px;
   background-color: #004884;
   color: #f2f2f2;
   text-align: center;
@@ -119,9 +130,11 @@ header {
 }
 
 .About {
+  scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
   padding-block: 20px;
   display: flex;
   justify-content: space-around;
+  padding: 30px;
   align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -132,6 +145,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     color: #004884;
+    user-select: none;
   }
 
   p {
@@ -143,6 +157,7 @@ header {
     width: 1110px;
     margin-bottom: 8px;
     width: 800px;
+    user-select: none;
   }
 
   img {
@@ -159,6 +174,7 @@ header {
   letter-spacing: 2px;
   color: #004884;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 .Problem {
