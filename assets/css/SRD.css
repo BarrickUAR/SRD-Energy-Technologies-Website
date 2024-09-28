@@ -35,6 +35,27 @@ p {
   user-select: none;
 }
 
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #006c8b;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #006c8b;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -72,7 +93,7 @@ header {
   margin-bottom: 100px;
 }
 
-.Navbar {
+nav {
   position: fixed;
   width: 100%;
   top: 0;
@@ -129,7 +150,7 @@ header {
   }
 }
 
-.Introduction {
+#Introduction {
   padding: 30px;
   display: flex;
   flex-direction: row-reverse;
@@ -166,7 +187,7 @@ header {
   }
 }
 
-.About {
+#about {
   scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
   padding-block: 20px;
   display: flex;
@@ -205,14 +226,52 @@ header {
   }
 }
 
-.Problems h1 {
-  margin-top: 20px;
+#why {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+
+  #EuPhoto img {
+    margin-left: 50px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+}
+
+.WhyHeading {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #006c8b;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   user-select: none;
 }
 
@@ -269,84 +328,28 @@ header {
   transition: all 0.5s;
 }
 
-/* Langugage Select */
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown button */
-.dropbtn {
-  background-color: #006c8b;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
-/* Langugage Select */
-
-.Why {
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 100px;
+#hoWeSolve {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-
+  padding: 30px;
+  gap: 50px;
+  margin-bottom: 100px;
   img {
-    width: 400px;
-    margin-bottom: 30px;
-  }
-
-  #EuPhoto img {
-    margin-left: 50px;
+    margin: 0 auto;
+    border-radius: 14px;
+    margin-bottom: 10px;
   }
 
   h2 {
+    text-align: center;
     margin-bottom: 8px;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
     letter-spacing: 1px;
     color: #006c8b;
     user-select: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   p {
@@ -361,35 +364,26 @@ header {
   }
 }
 
-.WhyHeading {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #006c8b;
-  margin-bottom: 50px;
-  user-select: none;
+.HowWeSolve-Item {
+  border-bottom: 1px solid #006c8b;
+  border-top: 1px solid #006c8b;
+  padding-block: 20px;
 }
 
-.HowWeSolve {
+#ourSolition {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
-  margin-bottom: 100px;
-  img {
-    border-radius: 14px;
-  }
+  justify-content: center;
+  padding: 100px;
 
-  h2 {
-    text-align: center;
+  h3 {
     margin-bottom: 8px;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
     color: #006c8b;
     user-select: none;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   p {
@@ -408,13 +402,26 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
 }
 
-.OurSolition {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.Solitions-Item {
+  margin-bottom: 30px;
+}
+
+#whyCharging {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+  margin: 0 auto;
+  gap: 30px;
+  margin-bottom: 100px;
 
   h3 {
     margin-bottom: 8px;
@@ -423,7 +430,7 @@ header {
     letter-spacing: 1px;
     color: #006c8b;
     user-select: none;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   p {
@@ -436,4 +443,36 @@ header {
     user-select: none;
     text-align: center;
   }
+
+  .LastItem {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.WhyCharging-Item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #006c8b;
+  border-radius: 14px;
+  padding: 15px;
+  background-color: white;
+  gap: 30px;
+  -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img {
+    width: 50px;
+    margin: 0 auto;
+  }
+}
+
+.WhyCharging-Item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 108, 139, 0.5);
 }
