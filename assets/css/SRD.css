@@ -227,11 +227,12 @@ nav {
 }
 
 #why {
+  height: 600px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 
   img {
@@ -476,3 +477,156 @@ nav {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 108, 139, 0.5);
 }
+
+.CustomerBase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  margin: 0 auto;
+  gap: 50px;
+  margin-bottom: 100px;
+
+  img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+
+  /* Carousel Start */
+}
+
+/* Carousel Start */
+
+.carousel-section {
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  padding: 30px; /* Added missing semicolon */
+  margin-bottom: 100px;
+}
+
+.carousel-section h5 {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 14px;
+  background-color: white;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #006c8b;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  max-height: 600px; /* Slider'ın maksimum yüksekliği */
+  overflow: hidden; /* Taşan içeriği gizle */
+}
+
+.custom-carousel-img {
+  width: 100%; /* Resmin genişliği */
+  height: auto; /* Yükseklik otomatik ayarlanır */
+  object-fit: cover; /* Resim düzgün görünmesi için */
+}
+
+/* Carousel End */
+
+/* Slider Company */
+
+#sliderCompanySection {
+  h1 {
+    margin-bottom: 50px;
+  }
+}
+
+.white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/* Slider Company */
