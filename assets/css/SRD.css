@@ -563,6 +563,11 @@ nav {
   h1 {
     margin-bottom: 50px;
   }
+
+  img {
+    width: 200px;
+    height: 100px;
+  }
 }
 
 .white-gradient {
