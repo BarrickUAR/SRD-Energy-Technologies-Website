@@ -964,10 +964,10 @@ ul li .descr::before {
 
 /* Milestones End */
 
-.Footer {
+footer {
   display: flex;
+  flex-direction: column;
   padding: 30px;
-  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   background-color: #006c8b;
@@ -993,6 +993,13 @@ ul li .descr::before {
     margin-bottom: 8px;
     user-select: none;
   }
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+  margin-bottom: 50px;
 }
 
 /* Scroll to Top Button */
