@@ -103,7 +103,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: rgba(255, 255, 255, 0.877);
   opacity: 0.9;
   z-index: 999999999;
@@ -112,9 +112,10 @@ nav {
     font-family: "Architype Albers W00";
   }
 
-  ul {
+  ol {
     display: flex;
     gap: 50px;
+    margin-bottom: 0px;
   }
 
   .navbar li,
@@ -673,10 +674,12 @@ nav {
 
 .Team {
   padding: 30px;
-  text-align: center;
-  display: flex;
+  display: grid;
   justify-content: center;
-  gap: 50px;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 30px;
   margin-bottom: 100px;
 
   h3 {
@@ -691,19 +694,33 @@ nav {
 
   img {
     margin: 0 auto;
-    width: 255px;
-    height: 255px;
-    margin-bottom: 30px;
-    border-radius: 14px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
   }
+}
+
+.Team-Item {
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 15px;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Milestones */
 
+#milestones {
+  margin-bottom: 100px;
+}
+
 h1 {
   text-align: center;
 }
-
 ul {
   --col-gap: 2rem;
   --row-gap: 2rem;
@@ -717,7 +734,6 @@ ul {
   margin-inline: auto;
 }
 
-/* line */
 ul::before {
   content: "";
   grid-column: 1;
@@ -726,14 +742,10 @@ ul::before {
   border-radius: calc(var(--line-w) / 2);
 }
 
-/* columns*/
-
-/* row gaps */
 ul li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
-/* card */
 ul li {
   grid-column: 2;
   --inlineP: 1.5rem;
@@ -743,7 +755,6 @@ ul li {
   grid-template-rows: min-content min-content min-content;
 }
 
-/* date */
 ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
@@ -763,7 +774,6 @@ ul li .date {
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-/* date flap */
 ul li .date::before {
   content: "";
   width: var(--inlineP);
@@ -777,7 +787,6 @@ ul li .date::before {
   right: 0;
 }
 
-/* circle */
 ul li .date::after {
   content: "";
   position: absolute;
@@ -792,7 +801,6 @@ ul li .date::after {
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* title descr */
 ul li .title,
 ul li .descr {
   background: var(--bgColor);
@@ -810,7 +818,6 @@ ul li .descr {
   font-weight: 300;
 }
 
-/* shadows */
 ul li .title::before,
 ul li .descr::before {
   content: "";
@@ -874,3 +881,34 @@ ul li .descr::before {
 }
 
 /* Milestones End */
+
+footer {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #006c8b;
+  color: #f2f2f2;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #f2f2f2;
+    user-select: none;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #f2f2f2;
+    margin-bottom: 8px;
+    user-select: none;
+  }
+}
