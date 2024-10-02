@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://db.onlinewebfonts.com/c/c4f0e73a2f65ce98daaf73645f6bdfd8?family=Architype+Albers+W00"
@@ -21,21 +22,48 @@
 
 <body>
 
+
+    <!-- HamburgerMenu -->
+
+    <div class="hamburgermenu-container">
+        <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="menu-links" class="menu-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="#about">Hakkımızda</a>
+            <a href="#servies">Hizmetler</a>
+            <a href="#contacts">İletişim</a>
+        </div>
+
+    </div>
+
+
+    <!-- HamburgerMenu -->
+
+
+
+
     <nav>
         <div class="Logo">
             <h1>SRD</h1>
         </div>
-        <navbar>
+        <Navbar>
             <ol>
-                <li><a href="#Home" id="Home">Home</a></li>
+                <li><a href="#" id="Home">Home</a></li>
                 <li><a href="#about" id="About">About</a></li>
+                <li><a href="#ourTeam" id="Team">Our Team</a></li>
                 <li><a href="#contact" id="Contact">Contact</a></li>
             </ol>
-        </navbar>
+        </Navbar>
         <!-- <a href="#">Blog</a> -->
         <div class="SocialMedia">
-            <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"><img src="assets/images/linkedin.svg"
+            <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"><img src="assets/images/linkedin.png"
                     width="30px" alt="Linkedin"></a>
+
+            <a href="mailto:demir@srdenergy.tech"><img src="assets/images/mail.png" width="30px" alt="Email"></a>
 
         </div>
     </nav>
@@ -45,13 +73,13 @@
     </header>
 
     <section id="Introduction">
-
+        <h1></h1>
         <div class="Intoduction-Img">
             <img src="assets/images/Yatch.png" alt="Charger">
         </div>
 
         <div class="Introduction-Text">
-            <h2><span>High Powered Ultra Fast Chargers</span> <br> for Electric Boats & Yachts</h2>
+            <h2>High Powered Ultra Fast Chargers<br> for Electric Boats & Yachts</h2>
             <p>SRD Energy Technologies is a leading provider of hydrogen-powered electric vehicle charging stations.
                 <br>
                 Our
@@ -73,11 +101,11 @@
         </div>
         <div class="AboutText">
             <h2>Who We Are</h2>
-            <p>Welcome to <span>SRD Energy Technologies!</span></p>
+            <p>Welcome to SRD Energy Technologies!</p>
             <p>We specialize in the design and manufacturing of hydrogen-powered electric vehicle charging stations.
             </p>
             <p>Our comprehensive range caters to diverse needs, spanning residential, non-residential, and industrial
-                applications for passenger <span>cars, trucks, buses, and industrial vehicles.</span></p>
+                applications for passenger cars, trucks, buses, and industrial vehicles.</p>
         </div>
     </section>
 
@@ -115,15 +143,15 @@
                 <img src="assets/images/Charge.png" alt="Problem 1">
                 <div class="Problem-Text">
                     <h3>Energy Demand</h3>
-                    <p>Escalating <span>energy demand</span> of electric car charging stations</p>
+                    <p>Escalating energy demand of electric car charging stations</p>
                 </div>
             </div>
             <div class="Problem-Item">
                 <img src="assets/images/Electric.png" alt="Problem 1">
                 <div class="Problem-Text">
                     <h3>Insufficent Power Grids</h3>
-                    <p>Conventional charging infrastructure strains existing power grids, leading to <span>overburdened
-                            systems and potential shortages</span></p>
+                    <p>Conventional charging infrastructure strains existing power grids, leading to overburdened
+                        systems and potential shortages</p>
                 </div>
             </div>
             <div class="Problem-Item">
@@ -131,7 +159,7 @@
                 <div class="Problem-Text">
                     <h3>The Climate Change</h3>
                     <p>Impedes the widespread deployment of electric vehicles
-                        <span>Environmental concerns</span> due to the reliance on non-renewable energy source
+                        Environmental concerns due to the reliance on non-renewable energy source
                     </p>
                 </div>
             </div>
@@ -281,58 +309,37 @@
 
     <h1 class="allHeading">Our Customer Base</h1>
 
+
     <section class="carousel-section">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- İlk slide -->
-                <div class="carousel-item active" data-bs-interval="10000">,
-                    <h5>Seaport</h5>
-                    <img src="assets/images/seaport.jpg" class="d-block custom-carousel-img" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
+
+
+        <div class="contactContainer">
+            <div class="card-carousel">
+                <div class="card" id="1">
+                    <div class="image-container"></div>
+                    <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
                 </div>
-                <!-- İkinci slide -->
-                <div class="carousel-item" data-bs-interval="2000">
-                    <h5>Harbour</h5>
-                    <img src="assets/images/harbour.jpg" class="d-block custom-carousel-img" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
+                <div class="card" id="2">
+                    <div class="image-container"></div>
+                    <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
                 </div>
-                <!-- Üçüncü slide -->
-                <div class="carousel-item">
-                    <h5>Boat Park</h5>
-                    <img src="assets/images/boatpark.jpg" class="d-block custom-carousel-img" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
+                <div class="card" id="3">
+                    <div class="image-container"></div>
+                    <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
                 </div>
-                <!-- Dördüncü Slide -->
-                <div class="carousel-item">
-                    <h5>Inland Port</h5>
-                    <img src="assets/images/inlandport.jpg" class="d-block custom-carousel-img" alt="Fourth slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
+                <div class="card" id="4">
+                    <div class="image-container"></div>
+                    <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
                 </div>
-                <!-- Beşinci Slide -->
-                <div class="carousel-item">
-                    <h5>River Port</h5>
-                    <img src="assets/images/riverport.jpg" class="d-block custom-carousel-img" alt="Fifth slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
+                <div class="card" id="5">
+                    <div class="image-container"></div>
+                    <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
         </div>
-    </section>
 
+    </section>
 
 
     <section id="sliderCompanySection">
@@ -378,7 +385,7 @@
                 </div>
 
                 <div class="advisor-Item">
-                    <img src="assets/images/VentureLeaders.jpg" />
+                    <img src="assets/images/VentureLeaders.png" />
                 </div>
 
                 <div class="advisor-Item">
@@ -433,9 +440,6 @@
         </article>
 
     </section>
-
-
-
 
     <h1 class="allHeading">Our Team</h1>
 
@@ -521,7 +525,7 @@
 
     <section id="contact">
 
-        <div class="container d-flex justify-content-center align-items-center">
+        <div class="contactContainer d-flex justify-content-center align-items-center">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
                 <g id="Image">
