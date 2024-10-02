@@ -337,9 +337,10 @@ nav {
   gap: 50px;
   margin-bottom: 100px;
   img {
+    width: 200px;
     margin: 0 auto;
     border-radius: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -560,22 +561,84 @@ nav {
 /* Slider Company */
 
 #sliderCompanySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+#ourPartners {
   img {
-    width: 200px;
-    height: 100px;
-    padding: 10px;
+    border-radius: 14px;
+    margin: 0 auto;
   }
 }
 
-.slide-track {
+.partners-Item {
   display: flex;
-  gap: 50px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 3px solid #006c8b;
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  img {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 14px;
+  }
 }
 
-/* Slider Company */
+#ourAdvisors {
+  display: flex;
+  text-align: center;
+  padding-inline: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background-color: transparent;
+
+  img {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 14px;
+  }
+}
+
+.advisors-Item {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-inline: 30px;
+  justify-content: center;
+  border: 3px solid #006c8b;
+  border-radius: 14px;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 14px;
+  }
+}
 
 #sdgGoals {
   display: flex;
@@ -587,9 +650,8 @@ nav {
 
   img {
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
     border-radius: 14px;
   }
 
@@ -599,21 +661,63 @@ nav {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: #006c8b;
+    color: white;
     margin-bottom: 8px;
     user-select: none;
     text-align: center;
   }
 }
 
-.Sdg-Item1 {
+.sgdGoal {
+  gap: 10px;
   display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sgdGoal-Item1 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
+  background-color: #fcb712;
+}
+
+.sgdGoal-Item2 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #f36d26;
+}
+
+.sgdGoal-Item3 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #fd9d24;
+}
+
+.sgdGoal-Item4 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #4a7740;
 }
 
 .Team {
-  padding: 30px;
+  padding: 10px;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -629,7 +733,7 @@ nav {
     letter-spacing: 1px;
     color: #006c8b;
     user-select: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   img {
@@ -637,13 +741,14 @@ nav {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-bottom: 20px;
   }
 }
 
 .Team-Item {
   border: 1px solid transparent;
   border-radius: 14px;
-  padding: 15px;
+  padding: 1px;
   background-color: transparent;
   -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
   -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
@@ -885,7 +990,13 @@ ul li .date::after {
 
 ul li .title,
 ul li .descr {
-  background: var(--bgColor);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #006c8b;
+  margin-bottom: 8px;
+  user-select: none;
   position: relative;
   padding-inline: 1.5rem;
 }
@@ -894,6 +1005,7 @@ ul li .title {
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
+  font-weight: bolder;
 }
 ul li .descr {
   padding-block-end: 1.5rem;
