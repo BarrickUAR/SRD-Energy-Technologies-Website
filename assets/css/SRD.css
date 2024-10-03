@@ -115,26 +115,30 @@ nav {
   background-color: rgba(255, 255, 255, 0.877);
   opacity: 0.9;
   z-index: 999999999;
+  margin-bottom: 0;
 
   h1 {
     color: #006c8b;
     font-size: 26px;
     font-family: "Architype Albers W00";
+    margin: 0;
   }
 
   h3 {
     font-family: "Quicksand", sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bolder;
+    line-height: normal;
     letter-spacing: 1px;
     color: #006c8b;
     user-select: none;
+    margin: 0;
   }
 
   ol {
     display: flex;
     gap: 50px;
-    margin-bottom: 0px;
+    margin: 0px;
   }
 
   .navbar li,
@@ -937,7 +941,7 @@ svg {
 }
 
 #contact {
-  scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
+  scroll-margin-top: 140px; /* Navbar yüksekliğine göre ayarlayın */
 }
 
 form {
@@ -1064,14 +1068,11 @@ ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
   color: white;
   font-size: 1.25rem;
-  font-weight: 700;
-
+  font-weight: bolder;
   display: grid;
   place-content: center;
   position: relative;
@@ -1109,7 +1110,7 @@ ul li .date::after {
 ul li .title,
 ul li .descr {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bolder;
   letter-spacing: 1px;
   line-height: 1.5;
   color: #006c8b;
@@ -1119,15 +1120,14 @@ ul li .descr {
   padding-inline: 1.5rem;
 }
 ul li .title {
+  font-weight: bolder;
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
-  font-weight: 500;
-  font-weight: bolder;
 }
 ul li .descr {
   padding-block-end: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 ul li .title::before,
@@ -1250,6 +1250,18 @@ footer {
 
 .scroll-to-top:hover {
   background-color: #0056b3;
+}
+
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 /* Scroll to Top Button */
 
