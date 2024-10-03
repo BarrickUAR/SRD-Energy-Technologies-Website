@@ -1298,7 +1298,8 @@ footer {
     padding: 10px;
     display: block;
     position: fixed;
-    top: 10px;
+    top: 100px;
+    z-index: 9999999;
     margin: 0 auto;
     max-width: 100%;
     margin-bottom: 50px;
@@ -1375,7 +1376,7 @@ footer {
   }
 
   #about {
-    scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
+    scroll-margin-top: -40px; /* Navbar yüksekliğine göre ayarlayın */
     padding-block: 20px;
     display: flex;
     flex-direction: column;
@@ -1430,7 +1431,7 @@ footer {
 
     #EuPhoto img {
       margin-top: 100px;
-      margin-left: 115px;
+      margin-left: 37px;
     }
 
     h2 {
@@ -2001,7 +2002,7 @@ footer {
   }
 
   #ourTeam {
-    scroll-margin-top: 250px;
+    scroll-margin-top: 10px;
   }
 
   .Team {
@@ -2017,7 +2018,7 @@ footer {
 
     h3 {
       margin-bottom: 8px;
-      font-size: 36px;
+      font-size: 28px;
       font-weight: bold;
       letter-spacing: 1px;
       color: #006c8b;
@@ -2125,7 +2126,7 @@ footer {
   }
 
   #contact {
-    scroll-margin-top: 200px; /* Navbar yüksekliğine göre ayarlayın */
+    scroll-margin-top: 90px; /* Navbar yüksekliğine göre ayarlayın */
   }
 
   form {
