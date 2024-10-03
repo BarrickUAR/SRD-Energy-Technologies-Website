@@ -361,19 +361,17 @@ const carousel = new CardCarousel(cardsContainer);
 
 // Hamburger Menu
 
-
 function toggleMenu() {
-    const menuIcon = document.getElementById("menu-icon");
-    const menuLinks = document.getElementById("menu-links");
-  
-    menuLinks.classList.toggle("show");
-  
-    if (menuLinks.classList.contains("show")) {
-      menuIcon.innerHTML = "&#x2715;";
-    } else {
-      menuIcon.innerHTML = "&#9776;";
-    }
-  
+  const menuIcon = document.getElementById("menu-icon");
+  const menuLinks = document.getElementById("menu-links");
+
+  menuLinks.classList.toggle("show");
+
+  if (menuLinks.classList.contains("show")) {
+    menuIcon.innerHTML = "&#x2715;";
+  } else {
+    menuIcon.innerHTML = "&#9776;";
   }
+}
 
 // Hamburger Menu
