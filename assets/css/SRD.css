@@ -88,6 +88,18 @@ table {
   display: none;
 }
 
+.fade-in {
+  opacity: 0; /* Başlangıçta görünmez */
+  transform: translateY(30px); /* Aşağıdan yukarı kaydırma efekti */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti */
+  margin: 20px;
+}
+
+.fade-in.visible {
+  opacity: 1; /* Görünür hale gelir */
+  transform: translateY(0); /* Normal konumuna gelir */
+}
+
 header {
   background-image: url(/assets/images/Boat6.jpg);
   background-size: cover;
@@ -576,13 +588,13 @@ nav {
   width: 450px;
   padding: 30px;
   border-radius: 14px;
-  background-color: white;
   position: absolute;
   top: 0;
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.4s;
-  background-color: #006c8b;
+  background-color: #1a87a5;
+  opacity: 0.9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   user-select: none;
   cursor: pointer;
@@ -595,6 +607,35 @@ nav {
   border-radius: 50%;
   border: 13px solid #006c8b;
 }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    user-select: none;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
+}
 .dots {
   display: flex;
   justify-content: center;
@@ -602,8 +643,8 @@ nav {
   margin-bottom: 100px;
 }
 .dots label {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   cursor: pointer;
   background-color: #006c8b;
@@ -617,7 +658,7 @@ nav {
 #t-4:checked ~ .dots label[for="t-4"],
 #t-5:checked ~ .dots label[for="t-5"] {
   transform: scale(2);
-  background-color: #fff;
+  background-color: #0056b3;
 }
 #t-1:checked ~ .dots label[for="t-2"],
 #t-2:checked ~ .dots label[for="t-1"],
@@ -877,8 +918,10 @@ nav {
 /* Contact Form */
 
 svg {
-  height: 23rem;
-  margin-right: 4rem;
+  width: 500px;
+  height: 500px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 #envelope {
@@ -1249,16 +1292,7 @@ footer {
   background-color: #0056b3;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
-}
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 /* Scroll to Top Button */
 
 /* HamburgerMenu */
