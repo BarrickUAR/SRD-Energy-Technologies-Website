@@ -2554,7 +2554,7 @@ footer {
   }
 
   #about {
-    scroll-margin-top: -40px; /* Navbar yüksekliğine göre ayarlayın */
+    scroll-margin-top: -40px; 
     padding-block: 20px;
     display: flex;
     flex-direction: column;
