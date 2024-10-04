@@ -59,6 +59,7 @@ p {
   color: #006c8b;
   margin-bottom: 8px;
   user-select: none;
+  text-align: center;
 }
 
 a {
@@ -2457,14 +2458,8 @@ footer {
     margin: 0 auto;
   }
 
-  p {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 1;
-    color: #006c8b;
-    margin-bottom: 8px;
-    user-select: none;
+  .HeadingAndParagraph {
+    padding: 30px;
   }
 
   header {
@@ -2529,33 +2524,33 @@ footer {
     justify-content: center;
     gap: 50px;
     text-align: center;
+  }
 
-    h2 {
-      margin-bottom: 8px;
-      font-size: 36px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #006c8b;
-      user-select: none;
-      margin-bottom: 30px;
-    }
+  #Introduction h2 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 30px;
+  }
 
-    p {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      color: #006c8b;
-      margin-bottom: 8px;
-      user-select: none;
-      text-align: center;
-    }
+  #Introduction p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+    text-align: center;
+  }
 
-    img {
-      background: none;
-      border-radius: 12px;
-      pointer-events: none;
-    }
+  #Introduction img {
+    background: none;
+    border-radius: 12px;
+    pointer-events: none;
   }
 
   #about {
@@ -2569,33 +2564,33 @@ footer {
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
+  }
 
-    h2 {
-      margin-bottom: 8px;
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #006c8b;
-      user-select: none;
-      margin-bottom: 50px;
-    }
+  #about h2 {
+    margin-bottom: 8px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #006c8b;
+    user-select: none;
+    margin-bottom: 50px;
+  }
 
-    p {
-      width: 350px;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      line-height: 1;
-      color: #006c8b;
-      margin-bottom: 8px;
-      user-select: none;
-    }
+  #about p {
+    width: 350px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #006c8b;
+    margin-bottom: 8px;
+    user-select: none;
+  }
 
-    img {
-      background: none;
-      border-radius: 12px;
-      pointer-events: none;
-    }
+  #about img {
+    background: none;
+    border-radius: 12px;
+    pointer-events: none;
   }
 
   #why {
