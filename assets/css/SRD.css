@@ -445,6 +445,7 @@ nav {
   text-align: center;
 
   img {
+    width: 100px;
     margin: 0 auto;
   }
 }
