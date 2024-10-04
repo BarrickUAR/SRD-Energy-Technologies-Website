@@ -835,6 +835,7 @@ nav {
 }
 
 .sgdGoal-Item1 {
+  border-radius: 14px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -844,6 +845,7 @@ nav {
 }
 
 .sgdGoal-Item2 {
+  border-radius: 14px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -853,6 +855,7 @@ nav {
 }
 
 .sgdGoal-Item3 {
+  border-radius: 14px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -862,6 +865,7 @@ nav {
 }
 
 .sgdGoal-Item4 {
+  border-radius: 14px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -917,11 +921,20 @@ nav {
 
 /* Contact Form */
 
+.formAndImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+  margin: 0 auto;
+}
+
 svg {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 100px;
   margin-left: 50px;
-  margin-bottom: 20px;
 }
 
 #envelope {
@@ -1291,7 +1304,6 @@ footer {
 .scroll-to-top:hover {
   background-color: #0056b3;
 }
-
 
 /* Scroll to Top Button */
 
@@ -1825,12 +1837,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
     grid-template-columns: repeat(2, 1fr);
-
     justify-content: center;
     padding: 30px;
-
     gap: 50px;
     margin-bottom: 100px;
 
@@ -1860,7 +1869,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-content: center;
-    border-radius: 14px;
     -webkit-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
     -moz-box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
     box-shadow: 0px 0px 33px -14px rgba(0, 108, 139, 1);
