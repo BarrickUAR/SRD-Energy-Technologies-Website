@@ -226,6 +226,7 @@ nav {
     color: #006c8b;
     user-select: none;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   p {
@@ -1416,6 +1417,7 @@ footer {
     }
   }
 
+
   #why {
     display: flex;
     text-align: center;
@@ -2554,7 +2556,7 @@ footer {
   }
 
   #about {
-    scroll-margin-top: -40px; 
+    scroll-margin-top: -40px;
     padding-block: 20px;
     display: flex;
     flex-direction: column;
