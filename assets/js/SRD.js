@@ -393,3 +393,10 @@ document.addEventListener("DOMContentLoaded", function () {
   hiddenElements.forEach((el) => observer.observe(el));
 });
 // Scroll Effect
+
+// Carousel
+
+
+
+
+// Carousel

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://db.onlinewebfonts.com/c/c4f0e73a2f65ce98daaf73645f6bdfd8?family=Architype+Albers+W00"
         rel="stylesheet">
+    <script src="assets/js/Srd.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>SRD Energy Technologies</title>
     <link rel="stylesheet" href="assets/css/SRD.css">
-    <script src="assets/js/SRD.js" defer></script>
+
     <link rel="icon" href="assets/images/Favicon.png" type="image/x-icon">
 </head>
 
@@ -69,7 +70,7 @@
         <div class="Hero" id="Home"></div>
     </header>
 
-    <section id="Introduction" class="hidden">
+    <section id="Introduction" class="">
         <!-- <h1></h1>
         <div class="Intoduction-Img">
             <img src="assets/images/Yatch.png" alt="Charger">
@@ -87,7 +88,7 @@
 
     </section>
 
-    <section id="about" class="hidden">
+    <section id="about" class="">
 
         <div class="AboutImg">
             <img src="assets/images/About.png" alt="About Us">
@@ -107,7 +108,7 @@
     </section>
 
     <div class="HeadingAndParagraph">
-        <h1 class="allHeading hidden">Why Electric Charging for Maritime in Europe? Why Now?</h1>
+        <h1 class="allHeading ">Why Electric Charging for Maritime in Europe? Why Now?</h1>
         <p id="Paragraph">The European maritime sector is undergoing a significant transformation, <br> driven by
             stringent environmental
             regulations and a growing awareness of the need for sustainable practices. <br> Electric propulsion systems
@@ -121,7 +122,7 @@
         </p>
     </div>
 
-    <section id="why" class="hidden">
+    <section id="why" class="">
 
         <div class="WhyUsItem" id="EuPhoto">
             <img src="assets/images/eyu.png" alt="">
@@ -154,7 +155,7 @@
         </div>
     </section>
 
-    <section id="problems" class="hidden">
+    <section id="problems" class="">
         <h1 class="allHeading">Why SRD Energy Tech? </h1>
         <div class="Problem">
             <div class="Problem-Item">
@@ -198,7 +199,7 @@
         </div>
     </section>
 
-    <section id="hoWeSolve" class="hidden">
+    <section id="hoWeSolve" class="">
         <div class="HowWeSolve-Item">
             <img src="assets/images/fast.png" alt="Problem 1">
             <div class="HowWeSolvetext">
@@ -242,7 +243,7 @@
         infrastructure:
     </p>
 
-    <section id="ourSolition" class="hidden">
+    <section id="ourSolition" class="">
 
         <img src="assets/images/About.png" alt="Image">
         <div class="Solitions">
@@ -280,7 +281,7 @@
 
     <h1 class="allHeading">Why Charging Stations</h1>
 
-    <section id="whyCharging" class="hidden">
+    <section id="whyCharging" class="">
 
         <div class="WhyCharging-Item">
             <div class="WhyCharging-Img">
@@ -356,38 +357,56 @@
 
     <h1 class="allHeading">Our Potential Customer</h1>
 
-    <section class="carousel-section hidden">
 
 
-        <div class="carousel-Container">
-            <div class="card-carousel">
-                <div class="card" id="1">
-                    <div class="image-container"></div>
-                    <p>Marinas and Yacht Clubs</p>
-                </div>
-                <div class="card" id="2">
-                    <div class="image-container"></div>
-                    <p>Commercial Shipping Companies</p>
-                </div>
-                <div class="card" id="3">
-                    <div class="image-container"></div>
-                    <p>Government Agencies</p>
-                </div>
-                <div class="card" id="4">
-                    <div class="image-container"></div>
-                    <p>Private Vessel Owners</p>
-                </div>
-                <div class="card" id="5">
-                    <div class="image-container"></div>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
+    <section id="carouselSection">
+
+
+
+        <div class="slider">
+            <input type="radio" name="carousel" id="t-1">
+            <input type="radio" name="carousel" id="t-2">
+            <input type="radio" name="carousel" id="t-3" checked>
+            <input type="radio" name="carousel" id="t-4">
+            <input type="radio" name="carousel" id="t-5">
+            <div class="myCarousel">
+                <label class="item" for="t-1">
+                    <img src="assets/images/avatar0.png" alt="picture">
+                    Text
+                </label>
+                <label class="item" for="t-2">
+                    <img src="assets/images/avatar0.png" alt="picture">
+                    Text
+                </label>
+                <label class="item" for="t-3">
+                    <img src="assets/images/avatar0.png" alt="picture">
+                    Text
+                </label>
+                <label class="item" for="t-4">
+                    <img src="assets/images/avatar0.png" alt="picture">
+                    Text
+                </label>
+                <label class="item" for="t-5">
+                    <img src="assets/images/avatar0.png" alt="picture">
+                    Text
+                </label>
             </div>
-            <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+            <div class="dots">
+                <label for="t-1"></label>
+                <label for="t-2"></label>
+                <label for="t-3"></label>
+                <label for="t-4"></label>
+                <label for="t-5"></label>
+            </div>
         </div>
+
+
 
     </section>
 
-    <section id="sliderCompanySection" class="hidden">
+
+
+    <section id="sliderCompanySection" class="">
 
         <article id="outPartners">
 
@@ -499,7 +518,7 @@
         driving the future of maritime electrification.
     </p>
 
-    <section id="ourTeam" class="hidden">
+    <section id="ourTeam" class="">
         <div class="Team">
 
             <div class="Team-Item">
@@ -543,7 +562,7 @@
 
     </section>
 
-    <section id="milestones" class="Milestones hidden">
+    <section id="milestones" class="Milestones ">
         <h1 class="allHeading">SRD Energy Tech: Milestones in Maritime Electrification</h1>
         <ul>
             <li style="--accent-color:#41516C">
@@ -579,7 +598,7 @@
             </li>
             <li style="--accent-color:#41516C">
                 <p class="date">2027</p>
-                <p class="title">Title 5</p>
+                <p class="title"></p>
                 <p class="descr">Product validation and certification</p>
             </li>
         </ul>
@@ -587,7 +606,7 @@
 
     </section>
 
-    <section id="contact" class="hidden">
+    <section id="contact" class="">
 
         <div class="contactContainer d-flex justify-content-center align-items-center">
 
