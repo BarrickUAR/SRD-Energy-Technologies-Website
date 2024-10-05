@@ -1152,7 +1152,7 @@ ul li .date {
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
   text-align: center;
-  background-color: var(--accent-color);
+  background-color: #006c8b;
   color: white;
   font-size: 1.25rem;
   font-weight: bolder;
@@ -1221,8 +1221,8 @@ ul li .descr::before {
   height: 0.5rem;
   background: #006c8b;
   left: 50%;
-  border-radius: 50%;
-  filter: blur(10px);
+  border-radius: 10%;
+  filter: blur(0px);
   transform: translate(-50%, 50%);
 }
 ul li .title::before {
