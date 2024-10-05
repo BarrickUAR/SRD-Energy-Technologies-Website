@@ -1314,6 +1314,11 @@ footer {
   align-items: center;
   gap: 300px;
   margin-bottom: 50px;
+
+  h3 {
+    text-align: center;
+    margin-left: 125px;
+  }
 }
 
 /* Scroll to Top Button */
