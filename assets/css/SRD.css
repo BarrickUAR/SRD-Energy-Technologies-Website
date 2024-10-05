@@ -291,9 +291,10 @@ nav {
   }
 
   img {
-    width: 500px;
+    width: 400px;
+
     background: none;
-    border-radius: 12px;
+    border-radius: 50%;
     pointer-events: none;
   }
 }
