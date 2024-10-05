@@ -627,12 +627,12 @@ nav {
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.4s;
-  background-color: #1a87a5;
+  background-color: #fffffffb;
   opacity: 0.9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   user-select: none;
   cursor: pointer;
-  color: white;
+  color: #006c8b;
 }
 .myCarousel .item img {
   width: 200px;
@@ -654,7 +654,7 @@ nav {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: white;
+    color: #006c8b;
     user-select: none;
     margin-bottom: 10px;
   }
@@ -664,7 +664,7 @@ nav {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: white;
+    color: #006c8b;
     margin-bottom: 8px;
     user-select: none;
     text-align: center;
