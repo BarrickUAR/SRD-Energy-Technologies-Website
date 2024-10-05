@@ -904,7 +904,7 @@ nav {
 }
 
 #ourTeam {
-  scroll-margin-top: 55px; /* Navbar yüksekliğine göre ayarlayın */
+  scroll-margin-top: 50px; /* Navbar yüksekliğine göre ayarlayın */
 }
 
 .Team {
@@ -1024,7 +1024,7 @@ svg {
 }
 
 #contact {
-  scroll-margin-top: 140px; /* Navbar yüksekliğine göre ayarlayın */
+  scroll-margin-top: 1px; /* Navbar yüksekliğine göre ayarlayın */
 }
 
 form {
