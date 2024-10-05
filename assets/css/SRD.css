@@ -376,13 +376,13 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 30px;
+  padding: 50px;
   border-radius: 14px;
   box-shadow: 0 3px 12px rgba(6, 11, 47, 0.06);
   text-align: center;
 
   img {
-    width: 100%;
+    width: 300px;
     border-radius: 12px;
   }
 
