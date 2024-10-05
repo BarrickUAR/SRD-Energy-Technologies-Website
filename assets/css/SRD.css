@@ -848,7 +848,7 @@ nav {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: white;
+    color: #006c8b;
     margin-bottom: 8px;
     user-select: none;
     text-align: center;
@@ -874,7 +874,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #fcb712;
 }
 
 .sgdGoal-Item2 {
@@ -884,7 +883,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #f36d26;
 }
 
 .sgdGoal-Item3 {
@@ -894,7 +892,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #fd9d24;
 }
 
 .sgdGoal-Item4 {
@@ -904,7 +901,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #4a7740;
 }
 
 #ourTeam {
