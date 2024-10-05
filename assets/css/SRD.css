@@ -627,19 +627,18 @@ nav {
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.4s;
-  background-color: #fffffffb;
+  background-color: #f2f2f2;
   opacity: 0.9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   user-select: none;
   cursor: pointer;
-  color: #006c8b;
 }
 .myCarousel .item img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  border: 13px solid #006c8b;
+  border: 13px solid transparent;
 }
 
 .item {
