@@ -292,7 +292,6 @@ nav {
 
   img {
     width: 400px;
-
     background: none;
     border-radius: 50%;
     pointer-events: none;
@@ -300,9 +299,10 @@ nav {
 }
 
 #why {
+  width: 300px;
   margin: 0 auto;
-  text-align: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
@@ -311,13 +311,12 @@ nav {
 
   img {
     margin: 0 auto;
-    width: 150px;
+    width: 100px;
     margin-bottom: 30px;
   }
 
   h2 {
-    margin-bottom: 8px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
     color: #006c8b;
