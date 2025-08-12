@@ -1,0 +1,134 @@
+body {
+  font-family: "Quicksand", "Architype Albers W00";
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Architype Albers W00";
+  src: url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.eot");
+  src: url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c4f0e73a2f65ce98daaf73645f6bdfd8.svg#Architype Albers W00")
+      format("svg");
+}
+
+.font-architype {
+  font-family: "Architype Albers W00", sans-serif;
+}
+
+.customerSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: #b9dbe3;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.customerSwiper .swiper-pagination-bullet-active {
+  background: #006c8b;
+  transform: scale(1.25);
+}
+
+.customerSwiper .swiper-button-next,
+.customerSwiper .swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 108, 139, 0.18);
+}
+
+.customerSwiper .swiper-button-next::after,
+.customerSwiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Milestones */
+#milestones {
+  margin: 80px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+#milestones h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #006c8b;
+  margin-bottom: 50px;
+}
+
+#milestones ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 4px;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  gap: var(--row-gap) var(--col-gap);
+  list-style: none;
+  margin: 0 auto;
+  position: relative;
+}
+
+#milestones ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background: #c5e3ec;
+  border-radius: 2px;
+}
+
+#milestones li {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+#milestones li .date {
+  background: #006c8b;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#milestones li .descr {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 3px solid #006c8b20;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  #milestones ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  #milestones ul::before {
+    grid-column: 2;
+  }
+  #milestones li:nth-child(odd) {
+    grid-column: 1;
+  }
+  #milestones li:nth-child(even) {
+    grid-column: 3;
+  }
+}
+/* Milestones */

@@ -1,3 +1,29 @@
+
+const swiper = new Swiper(".customerSwiper", {
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 28,
+  slidesPerView: 1.15,   // mobile'de yanlar görünsün
+  speed: 650,
+  grabCursor: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    640: { slidesPerView: 2.15, spaceBetween: 28 },
+    1024: { slidesPerView: 3.15, spaceBetween: 32 }
+  }
+});
+
 // Form
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("myForm");
@@ -339,10 +365,10 @@ class CardCarousel extends DraggingEvent {
 
     for (let i = 0; i < this.cards.length; i++) {
       const x = this.checkOrdering(
-          this.cards[i],
-          parseInt(this.cards[i].dataset.x),
-          xDist
-        ),
+        this.cards[i],
+        parseInt(this.cards[i].dataset.x),
+        xDist
+      ),
         scale = this.calcScale(x + xDist),
         scale2 = this.calcScale2(x + xDist),
         leftPos = this.calcPos(x + xDist, scale2);
@@ -379,3 +405,4 @@ function toggleMenu() {
 // Carousel
 
 // Carousel
+
