@@ -44,98 +44,87 @@
         <div class="container mx-auto flex items-center justify-between px-6 py-4">
 
             <!-- Logo -->
-            <a href="/">
-                <div class="flex flex-col">
-                    <h1 class="text-4xl font-bold text-[#006c8b] font-architype">SRD</h1>
-                    <h3 class="text-md font-bold text-[#006c8b]">Energy Technologies</h3>
-                </div>
+            <a href="/" class="flex flex-col">
+                <h1 class="text-4xl font-bold text-[#006c8b] font-architype">SRD</h1>
+                <h3 class="text-md font-bold text-[#006c8b]">Energy Technologies</h3>
             </a>
 
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-                <li>
-                    <a href="#"
-                        class="relative text-[#006c8b] text-xl tracing-wide  font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">
-                        Home
-                    </a>
+                <li><a href="#"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Home</a>
                 </li>
-                <li>
-                    <a href="#about"
-                        class="relative text-[#006c8b] text-xl tracing-wide  font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">
-                        About
-                    </a>
+                <li><a href="#about"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">About</a>
                 </li>
-                <li>
-                    <a href="#ourTeam"
-                        class="relative text-[#006c8b] text-xl tracing-wide  font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">
-                        Our Team
-                    </a>
+                <li><a href="#ourTeam"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Our
+                        Team</a></li>
+                <li><a href="#contact"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Contact</a>
                 </li>
-                <li>
-                    <a href="#contact"
-                        class="relative text-[#006c8b] text-xl tracing-wide  font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">
-                        Contact
-                    </a>
-                </li>
-                <li>
-                    <a href="blog.html"
-                        class="relative text-[#006c8b] text-xl tracing-wide  font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">
-                        Maritime News
-                    </a>
-                </li>
+                <li><a href="blog.html"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Maritime
+                        News</a></li>
             </ul>
 
-            <!-- Social Media Icons -->
+            <!-- Social (Desktop) -->
             <div class="hidden md:flex space-x-4 text-2xl">
                 <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"
-                    class="text-[#0077B5] hover:scale-110 hover:text-[#005582] transition-all duration-300">
+                    class="text-[#0077B5] hover:scale-110 hover:text-[#005582] transition">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="mailto:demir@srdenergy.tech"
-                    class="text-gray-600 hover:scale-110 hover:text-red-500 transition-all duration-300">
+                    class="text-gray-600 hover:scale-110 hover:text-red-500 transition">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
 
-            <!-- Hamburger Icon (Mobile) -->
-            <button id="menu-icon" onclick="toggleMenu()" class="md:hidden flex flex-col space-y-1.5">
-                <span class="block w-6 h-0.5 bg-gray-800"></span>
-                <span class="block w-6 h-0.5 bg-gray-800"></span>
-                <span class="block w-6 h-0.5 bg-gray-800"></span>
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+                class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center">
+                <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300 origin-center"
+                    id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 my-1.5 transition-opacity duration-300" id="bar2"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300 origin-center"
+                    id="bar3"></span>
             </button>
         </div>
+    </header>
 
-        <!-- Mobile Menu -->
-        <div id="menu-links"
-            class="fixed top-0 left-0 w-full h-full bg-white transform -translate-x-full transition-transform duration-300 md:hidden z-40">
-            <div class="flex flex-col items-center justify-center h-full space-y-6 text-lg font-medium">
-                <a href="#" class="hover:text-blue-600" onclick="toggleMenu()">Home</a>
-                <a href="#about" class="hover:text-blue-600" onclick="toggleMenu()">About</a>
-                <a href="#ourTeam" class="hover:text-blue-600" onclick="toggleMenu()">Our Team</a>
-                <a href="#contact" class="hover:text-blue-600" onclick="toggleMenu()">Contact</a>
-                <a href="#Faq" class="hover:text-blue-600" onclick="toggleMenu()">FAQ</a>
-                <div class="flex space-x-4 mt-6 text-3xl">
-                    <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"
-                        class="text-[#0077B5] hover:text-[#005582]">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:demir@srdenergy.tech" class="text-gray-600 hover:text-red-500">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+    <!-- Overlay -->
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-[60]"></div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu"
+        class="fixed top-0 left-0 w-80 max-w-[85%] h-full bg-white transform -translate-x-full transition-transform duration-300 md:hidden z-[70] shadow-xl">
+        <div class="flex flex-col items-start justify-start h-full p-6 space-y-6 text-lg font-medium">
+            <a href="#" class="hover:text-[#006c8b]" data-close>Home</a>
+            <a href="#about" class="hover:text-[#006c8b]" data-close>About</a>
+            <a href="#ourTeam" class="hover:text-[#006c8b]" data-close>Our Team</a>
+            <a href="#contact" class="hover:text-[#006c8b]" data-close>Contact</a>
+            <a href="blog.html" class="hover:text-[#006c8b]" data-close>Maritime News</a>
+
+            <div class="flex space-x-4 pt-4 text-2xl">
+                <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"
+                    class="text-[#0077B5] hover:text-[#005582]">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:demir@srdenergy.tech" class="text-gray-600 hover:text-red-500">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
-    </header>
-    <script>
-        function toggleMenu() {
-            document.getElementById("menu-links").classList.toggle("-translate-x-full");
-        }
-    </script>
-    <!-- HEADER SECTION -->
+    </nav>
+
+
+    <!-- /HEADER SECTION -->
+
 
 
     <!-- HERO SECTION -->
-    <section id="hero" class="min-h-screen">
+    <section id="hero" class="min-h-screen mb-14 lg:mb-24">
         <div class="hero-bg">
             <img src="assets/images/Boat6.jpg" alt="Hero Background"
                 class="w-full h-full object-cover absolute inset-0">
@@ -144,7 +133,7 @@
     <!-- HERO SECTION -->
 
     <!-- INTRODUCTION SECTION -->
-    <section id="Introduction" class="scrollReveal py-16 bg-white space-y-24">
+    <section id="Introduction" class="scrollReveal py-16 bg-white space-y-24 mb-14 lg:mb-24">
         <!-- 1. Bölüm -->
         <div class="text-center mb-12  " id="about">
             <h2 class="text-4xl md:text-6xl font-bold text-[#006c8b] leading-snug">
@@ -196,7 +185,7 @@
     <!-- INTRODUCTION SECTION -->
 
     <!-- WHY US SECTION -->
-    <section id="why" class="scrollReveal py-16 bg-white">
+    <section id="why" class="scrollReveal py-16 bg-white mb-14 lg:mb-24">
         <!-- Üst Başlık ve Açıklama -->
         <div class="text-center mb-12 px-6">
             <h1 class="text-4xl md:text-5xl font-bold text-[#006c8b] mb-6">
@@ -255,7 +244,7 @@
     <!-- WHY US SECTION -->
 
     <!-- PROBLEMS SECTION -->
-    <section id="problems" class="scrollReveal py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="problems" class="scrollReveal py-20 bg-gradient-to-b from-white to-gray-50 mb-14 lg:mb-24">
         <!-- Başlık -->
         <h1 class="text-4xl md:text-5xl font-extrabold text-[#006c8b] text-center mb-14 tracking-wide">
             Why SRD Energy Technologies?
@@ -324,7 +313,7 @@
     <!-- PROBLEMS SECTION -->
 
     <!-- HOW WE SOLVE SECTION -->
-    <section id="hoWeSolve" class="scrollReveal py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="hoWeSolve" class="scrollReveal py-20 bg-gradient-to-b from-white to-gray-50 mb-14 lg:mb-24">
         <!-- Başlık -->
         <h1 class="text-4xl md:text-5xl font-extrabold text-[#006c8b] text-center mb-14 tracking-wide">
             Features of Our Charging Stations
@@ -388,7 +377,7 @@
     <!-- HOW WE SOLVE SECTION -->
 
     <!-- POTENTIAL CUSTOMER SECTION  -->
-    <section id="carouselSection" class="relative py-20 overflow-hidden">
+    <section id="carouselSection" class="relative py-20 overflow-hidden mb-14 lg:mb-24">
         <!-- Gradient background + dekoratif şekiller -->
         <div class="absolute inset-0 bg-gradient-to-b from-white via-[#e7f4f8] to-white"></div>
         <div class="pointer-events-none absolute -top-24 -right-16 h-72 w-72 rounded-full bg-[#006c8b]/10 blur-3xl">
@@ -487,7 +476,8 @@
     <!-- POTENTIAL CUSTOMER SECTION  -->
 
     <!-- PARTNERS & ADVISORS SECTION -->
-    <section id="sliderCompanySection" class="scrollReveal py-20 bg-gradient-to-b from-white via-[#f4f9fa] to-white">
+    <section id="sliderCompanySection"
+        class="scrollReveal py-20 bg-gradient-to-b from-white via-[#f4f9fa] to-white mb-14 lg:mb-24">
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- Partners -->
@@ -540,7 +530,7 @@
     <!-- PARTNERS & ADVISORS SECTION -->
 
     <!-- SDG GOALS -->
-    <section id="sdgGoals" class="scrollReveal py-20 bg-[#f8fafc]">
+    <section id="sdgGoals" class="scrollReveal py-20 bg-[#f8fafc] mb-14 lg:mb-24">
         <div class="max-w-7xl mx-auto px-6">
             <h1 class="text-4xl font-bold text-center text-[#006c8b] mb-12">Our SDG Goals</h1>
 
@@ -587,7 +577,7 @@
     <!-- SDG GOALS -->
 
     <!-- OUR TEAM SECTION -->
-    <section id="ourTeam" class="scrollReveal py-20 bg-gradient-to-b from-white to-[#f8fafc]">
+    <section id="ourTeam" class="scrollReveal py-20 bg-gradient-to-b from-white to-[#f8fafc] mb-14 lg:mb-24">
         <div class="max-w-7xl mx-auto px-6">
             <!-- Heading + Intro -->
             <div class="text-center max-w-3xl mx-auto mb-14">
@@ -656,7 +646,7 @@
     <!-- OUT TEAM SECTION -->
 
     <!-- MILESTONES SECTION-->
-    <section id="milestones" class="scrollReveal">
+    <section id="milestones" class="scrollReveal mb-14 lg:mb-24">
         <h1>Our Milestones</h1>
         <ul>
             <li>
@@ -695,7 +685,7 @@
     <!-- MILESTONES SECTION-->
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="w-full bg-white py-20">
+    <section id="contact" class="w-full bg-white py-20 mb-14 lg:mb-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold text-[#006c8b]">Talk to Us</h2>
@@ -828,9 +818,8 @@
     </section>
     <!-- CONTACT SECTION -->
 
-
     <!-- FOOTER SECTION-->
-    <footer class="bg-[#006c8b] text-white py-12 mt-20">
+    <footer class="bg-[#006c8b] text-white py-12 mt-20 ">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
             <!-- Quick Links -->
@@ -879,19 +868,22 @@
     </footer>
     <!-- FOOTER SECTION-->
 
-    <button id="scrollToTop" class="scroll-to-top ">↑</button>
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
+    <div class="flex items-center flex-col justify-center text-white bg-black/75 p-3">
+        <div class="flex items-center justify-center text-white border-gray-200 border-t gap-4 text-center text-sm">
+            Designed with ❤️ by <a href="https://devpixel.com.tr" class="hover:underline font-semibold text-clifford"
+                target="_blank"><img src="/assets/images/devpixel-logo.png" alt="" width="100" height="100"></a>
+        </div>
+        <div class="flex items-center justify-center gap-4 devPixelSocial mt-2"><a href="https://devpixel.com.tr"
+                class="text-white duration-300 transition hover:text-green-500" target="_blank"><i class="fa fa-link"
+                    aria-hidden="true"></i> </a><a href="https://www.instagram.com/devpixeltech/"
+                class="text-white duration-300 transition hover:text-pink-600" target="_blank"><i
+                    class="fab fa-instagram"></i> </a><a href="https://www.linkedin.com/company/devpixel-tech"
+                class="text-white duration-300 transition hover:text-blue-700" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a></div>
+    </div>
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
 
-    <!-- ScrollReveal -->
-    <script>
-        ScrollReveal().reveal('.scrollReveal', {
-            delay: 200,
-            duration: 1000,
-            distance: '50px',
-            origin: 'bottom',
-            reset: true
-        });
-    </script>
-    <!-- ScrollReveal -->
 
 </body>
 
