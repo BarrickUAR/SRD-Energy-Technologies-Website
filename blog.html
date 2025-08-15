@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blogs - SRD Energy Technologies</title>
+    <meta name="description"
+        content="SRD Energy Technologies - High Powered Ultra Fast Chargers and Marine Energy Solutions." />
+
+    <!-- Custom Fonts -->
+    <link href="https://db.onlinewebfonts.com/c/c4f0e73a2f65ce98daaf73645f6bdfd8?family=Architype+Albers+W00"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/Favicon.png" type="image/x-icon" />
+
+    <!-- JS Libraries (Load after CSS for faster render) -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+        <div class="container mx-auto flex items-center justify-between px-6 py-4">
+
+            <!-- Logo -->
+            <a href="/" class="flex flex-col">
+                <h1 class="text-4xl font-bold text-[#006c8b] font-architype">SRD</h1>
+                <h3 class="text-md font-bold text-[#006c8b]">Energy Technologies</h3>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                <li><a href="/"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                </li>
+                <li><a href="/index.html#about"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">About</a>
+                </li>
+                <li><a href="/index.html#ourTeam"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Our
+                        Team</a></li>
+                <li><a href="/index.html#contact"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+                </li>
+                <li><a href="/blog.html"
+                        class="relative text-[#006c8b] text-xl font-bold after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#006c8b] after:transition-all after:duration-300 hover:after:w-full">Maritime
+                        News</a></li>
+            </ul>
+
+            <!-- Social (Desktop) -->
+            <div class="hidden md:flex space-x-4 text-2xl">
+                <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"
+                    class="text-[#0077B5] hover:scale-110 hover:text-[#005582] transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:demir@srdenergy.tech"
+                    class="text-gray-600 hover:scale-110 hover:text-red-500 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+                class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center">
+                <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300 origin-center"
+                    id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 my-1.5 transition-opacity duration-300" id="bar2"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300 origin-center"
+                    id="bar3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-[60]"></div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu"
+        class="fixed top-0 left-0 w-80 max-w-[85%] h-full bg-white transform -translate-x-full transition-transform duration-300 md:hidden z-[70] shadow-xl">
+        <div class="flex flex-col items-start justify-start h-full p-6 space-y-6 text-lg font-medium">
+            <a href="#" class="hover:text-[#006c8b]" data-close>Home</a>
+            <a href="index.html#about" class="hover:text-[#006c8b]" data-close>About</a>
+            <a href="index.html#ourTeam" class="hover:text-[#006c8b]" data-close>Our Team</a>
+            <a href="index.html#contact" class="hover:text-[#006c8b]" data-close>Contact</a>
+            <a href="blog.html" class="hover:text-[#006c8b]" data-close>Maritime News</a>
+
+            <div class="flex space-x-4 pt-4 text-2xl">
+                <a href="https://www.linkedin.com/company/srd-energy/" target="_blank"
+                    class="text-[#0077B5] hover:text-[#005582]">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:demir@srdenergy.tech" class="text-gray-600 hover:text-red-500">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- /HEADER SECTION -->
+
+    <!-- MAIN SECTION -->
+    <main class="px-6 md:px-8 lg:px-10 py-10 max-w-7xl mx-auto">
+
+        <!-- Başlık -->
+        <header class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Maritime News</h1>
+            <p class="text-gray-600 mt-1">SRD Energy’den güncel haberler ve yazılar.</p>
+        </header>
+
+        <!-- Yükleniyor -->
+        <div id="loading" class="text-center py-16">
+            <div class="text-lg font-semibold">Yükleniyor…</div>
+            <div class="text-gray-500">İçerik getiriliyor</div>
+        </div>
+
+        <!-- Liste Modu -->
+        <section id="listMode" class="hidden">
+            <div id="grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+            <!-- Boş durum -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <p class="text-lg font-medium">Henüz içerik yok</p>
+                <p class="text-gray-500 mt-1">Yakında burada yazılar görünecek.</p>
+            </div>
+        </section>
+
+        <!-- Detay Modu -->
+        <article id="detailMode" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 hidden">
+            <h1 id="postTitle" class="text-3xl font-bold mb-4"></h1>
+            <div class="flex flex-wrap gap-3 mb-4">
+                <time id="postDate" class="text-gray-500 text-sm"></time>
+                <div id="postTags" class="flex flex-wrap gap-2"></div>
+            </div>
+            <img id="postImage" src="" alt="" class="w-full h-auto rounded-lg mb-6">
+            <div id="postContent" class="max-w-none leading-7"></div>
+        </article>
+
+        <!-- Bulunamadı -->
+        <div id="notFound" class="text-center py-16 hidden">
+            <h2 class="text-2xl font-bold mb-2">Yazı bulunamadı</h2>
+            <p class="text-gray-500">Bağlantı yanlış olabilir ya da içerik kaldırılmıştır.</p>
+            <div id="availableSlugs" class="mt-4 text-sm text-gray-600"></div>
+            <a href="blog.html" class="inline-block mt-4 px-4 py-2 rounded-lg border">Blog anasayfasına dön</a>
+        </div>
+
+        <!-- Hata kutusu -->
+        <div id="errBox" class="hidden mt-8 p-4 border border-red-200 bg-red-50 text-red-700 rounded-lg text-sm"></div>
+    </main>
+
+    <script>
+        // ---- helpers ----
+        const $ = (id) => document.getElementById(id);
+        const qs = (k) => new URLSearchParams(location.search).get(k);
+        const norm = (s) => decodeURIComponent(String(s || "")).trim().toLowerCase();
+        const fmtDate = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("tr-TR", { year: "numeric", month: "long", day: "numeric" });
+
+        function showError(msg) {
+            const box = $("errBox");
+            box.textContent = msg;
+            box.classList.remove("hidden");
+        }
+
+        function renderList(posts) {
+            $("loading").classList.add("hidden");
+            $("detailMode").classList.add("hidden");
+            $("notFound").classList.add("hidden");
+            $("listMode").classList.remove("hidden");
+
+            if (!posts.length) {
+                $("emptyState").classList.remove("hidden");
+                return;
+            } else {
+                $("emptyState").classList.add("hidden");
+            }
+
+            $("grid").innerHTML = posts.map(p => `
+      <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="block overflow-hidden">
+          <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover group-hover:scale-[1.02] transition" loading="lazy">
+        </a>
+        <div class="p-5">
+          <div class="flex flex-wrap gap-2 mb-3">
+            ${(p.tags || []).map(t => `<span class="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">${t}</span>`).join("")}
+          </div>
+          <h2 class="text-xl font-semibold leading-snug">
+            <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="hover:underline">${p.title}</a>
+          </h2>
+          <div class="mt-4 flex items-center justify-between">
+            <time class="text-sm text-gray-500">${p.date ? fmtDate(p.date) : ""}</time>
+            <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="text-sm font-medium underline underline-offset-4">Oku →</a>
+          </div>
+        </div>
+      </article>
+    `).join("");
+        }
+
+        function renderDetail(post) {
+            $("loading").classList.add("hidden");
+            $("listMode").classList.add("hidden");
+            $("notFound").classList.add("hidden");
+            $("detailMode").classList.remove("hidden");
+
+            document.title = `${post.title} | SRD Energy Technologies`;
+            $("postTitle").textContent = post.title;
+            $("postDate").textContent = post.date ? fmtDate(post.date) : "";
+            $("postImage").src = post.image || "";
+            $("postImage").alt = post.title || "";
+            $("postContent").innerHTML = post.contentHtml || "<p>İçerik bulunamadı.</p>";
+
+            const tagsWrap = $("postTags");
+            tagsWrap.innerHTML = "";
+            (post.tags || []).forEach(tag => {
+                const s = document.createElement("span");
+                s.className = "px-3 py-1 text-xs bg-gray-100 rounded-full border";
+                s.textContent = tag;
+                tagsWrap.appendChild(s);
+            });
+        }
+
+        function renderNotFound(posts) {
+            $("loading").classList.add("hidden");
+            $("listMode").classList.add("hidden");
+            $("detailMode").classList.add("hidden");
+            $("notFound").classList.remove("hidden");
+            if (Array.isArray(posts) && posts.length) {
+                $("availableSlugs").innerHTML = "Mevcut sluglar: " +
+                    posts.map(p => `<a class="underline" href="blog.html?slug=${encodeURIComponent(p.slug)}">${p.slug}</a>`).join(" • ");
+            }
+        }
+
+        (async function init() {
+            try {
+                // JSON yolu: blog.html kökteyse data/blogs.json da kökte olmalı
+                const jsonUrl = new URL("data/blogs.json", location.href).toString();
+                const res = await fetch(jsonUrl, { cache: "no-store" });
+                if (!res.ok) throw new Error(`HTTP ${res.status} - ${jsonUrl}`);
+                const posts = await res.json();
+
+                const slugRaw = qs("slug");
+                const slug = norm(slugRaw);
+
+                // Slug yoksa LİSTE MODU
+                if (!slug) {
+                    renderList(posts);
+                    return;
+                }
+
+                // Slug varsa DETAY MODU
+                const post = posts.find(p => norm(p.slug) === slug);
+                if (!post) {
+                    renderNotFound(posts);
+                    showError(`Slug bulunamadı: "${slugRaw}".`);
+                    return;
+                }
+                renderDetail(post);
+
+            } catch (err) {
+                console.error(err);
+                renderNotFound([]);
+                showError("Veri getirilemedi: " + err.message + (location.protocol === "file:" ? " (file:// ile açıldıysa fetch çalışmaz)" : ""));
+            }
+        })();
+    </script>
+
+
+    <!-- MAIN SECTION -->
+
+
+
+
+    <!-- FOOTER SECTION-->
+    <footer class="bg-[#006c8b] text-white py-12 mt-20 ">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#" class="hover:underline">Data Privacy</a></li>
+                    <li><a href="#contact" class="hover:underline">Services</a></li>
+                    <li><a href="#" class="hover:underline">Impressum</a></li>
+                    <li><a href="#ourTeam" class="hover:underline">Contact</a></li>
+                    <li><a href="#" class="hover:underline">Achievements</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                <p class="leading-relaxed">
+                    SRD Energy Technologies <br>
+                    Germany <br>
+                    +49 157 513 025 41 <br>
+                    <a href="mailto:demir@srdenergy.tech" class="hover:underline">demir@srdenergy.tech</a>
+                </p>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="mailto:uberk.uar@gmail.com" class="p-3 bg-white rounded-full hover:bg-gray-200 transition">
+                        <img src="assets/images/mail.png" alt="Mail" class="w-5 h-5">
+                    </a>
+                    <a href="#" class="p-3 bg-white rounded-full hover:bg-gray-200 transition">
+                        <img src="assets/images/linkedin.png" alt="LinkedIn" class="w-5 h-5">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-200">
+            <p>© 2024 SRD Energy Technologies. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+    <!-- FOOTER SECTION-->
+
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
+    <div class="flex items-center flex-col justify-center text-white bg-black/75 p-3">
+        <div class="flex items-center justify-center text-white border-gray-200 border-t gap-4 text-center text-sm">
+            Designed with ❤️ by <a href="https://devpixel.com.tr" class="hover:underline font-semibold text-clifford"
+                target="_blank"><img src="/assets/images/devpixel-logo.png" alt="" width="100" height="100"></a>
+        </div>
+        <div class="flex items-center justify-center gap-4 devPixelSocial mt-2"><a href="https://devpixel.com.tr"
+                class="text-white duration-300 transition hover:text-green-500" target="_blank"><i class="fa fa-link"
+                    aria-hidden="true"></i> </a><a href="https://www.instagram.com/devpixeltech/"
+                class="text-white duration-300 transition hover:text-pink-600" target="_blank"><i
+                    class="fab fa-instagram"></i> </a><a href="https://www.linkedin.com/company/devpixel-tech"
+                class="text-white duration-300 transition hover:text-blue-700" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a></div>
+    </div>
+    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
+
+
+</body>
+
+</html>

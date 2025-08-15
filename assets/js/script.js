@@ -89,3 +89,91 @@ document.addEventListener('keydown', (e) => {
 
 
 
+
+
+
+// ===== ScrollReveal 
+const sr = ScrollReveal({
+  distance: '28px',
+  duration: 800,
+  easing: 'cubic-bezier(.2,.65,.3,1)',
+  interval: 80,
+  cleanup: true,
+  viewOffset: { top: 80, right: 0, bottom: 0, left: 0 }
+});
+
+// Başlık & paragraf girişleri
+sr.reveal('#Introduction h2, #Introduction h3, #why h1, #hoWeSolve h1, #sliderCompanySection h1, #sdgGoals h1, #ourTeam h1, #contact h2', {
+  origin: 'bottom'
+});
+sr.reveal('#Introduction p, #why p, #hoWeSolve p, #sdgGoals p, #ourTeam p, #contact .text-[#006c8b]/90', {
+  origin: 'bottom'
+});
+
+// Görsel + metin blokları
+sr.reveal('#Introduction .container .flex-1:first-child', { origin: 'left' });
+sr.reveal('#Introduction .container .flex-1:last-child', { origin: 'right' });
+sr.reveal('#Introduction .container:nth-of-type(2) .flex-1:first-child', { origin: 'right' });
+sr.reveal('#Introduction .container:nth-of-type(2) .flex-1:last-child', { origin: 'left' });
+
+// “Why / Problems / Features” kartları
+sr.reveal('#why .container > div, #problems .container > div, #hoWeSolve .container > div, #sdgGoals .grid > div', {
+  origin: 'bottom',
+  interval: 90,
+  beforeReveal: el => el.classList.add('card-float')
+});
+
+// Partner & Advisor logoları
+sr.reveal('#sliderCompanySection article > div > div', { origin: 'bottom', interval: 80 });
+
+// Team kartları
+sr.reveal('#ourTeam .grid > div', { origin: 'bottom', interval: 80 });
+
+// Milestones satırları
+sr.reveal('#milestones li', { origin: 'left', interval: 70 });
+
+// Contact sütunları
+sr.reveal('#contact .grid > *', { origin: 'bottom', interval: 120 });
+
+// ===== HERO – 
+(function () {
+  const img = document.querySelector('#hero .hero-bg img');
+  if (!img) return;
+  let latestY = 0, ticking = false;
+
+  function onScroll() {
+    latestY = window.scrollY || window.pageYOffset;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const translate = Math.min(latestY * 0.15, 120); // 0.15 oranlı parallax, max 120px
+        const scale = 1.05 + Math.min(latestY / 4000, 0.07); // scroll ile çok hafif ekstra zoom
+        img.style.transform = `translateY(${translate}px) scale(${scale})`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// ===== Swiper 
+(function () {
+  if (typeof Swiper === 'undefined') return;
+  if (document.querySelector('.customerSwiper')) {
+    if (!document.querySelector('.customerSwiper').swiper) {
+      new Swiper('.customerSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: { delay: 3500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 4 }
+        }
+      });
+    }
+  }
+})();

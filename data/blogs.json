@@ -1,0 +1,24 @@
+[
+    {
+        "slug": "core-web-vitals-2025",
+        "title": "2025'te Web Performansı: Core Web Vitals",
+        "date": "2025-07-28",
+        "tags": [
+            "Web",
+            "SEO"
+        ],
+        "image": "https://picsum.photos/seed/vitals/1200/700",
+        "contentHtml": "<p>CLS, LCP ve INP metriklerini gerçek dünyada nasıl iyileştiririz? İşte adım adım rehber...</p>"
+    },
+    {
+        "slug": "nextjs-i18n-app-router",
+        "title": "Next.js App Router için i18n Yol Haritası",
+        "date": "2025-07-15",
+        "tags": [
+            "Web",
+            "Next.js"
+        ],
+        "image": "https://picsum.photos/seed/i18n/1200/700",
+        "contentHtml": "<p>Çok dilli siteler için App Router ile i18n ayarlamanın yolları...</p>"
+    }
+]
