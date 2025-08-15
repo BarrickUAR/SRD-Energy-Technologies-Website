@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Blogs - SRD Energy Technologies</title>
+    <title>Maritime News - SRD Energy Technologies</title>
     <meta name="description"
         content="SRD Energy Technologies - High Powered Ultra Fast Chargers and Marine Energy Solutions." />
 
@@ -41,8 +41,7 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 
-
-<body>
+<body class="min-h-screen flex flex-col">
 
     <!-- HEADER SECTION -->
     <header class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
@@ -125,32 +124,31 @@
     <!-- /HEADER SECTION -->
 
     <!-- MAIN SECTION -->
-    <main class="px-6 md:px-8 lg:px-10 py-10 max-w-7xl mx-auto">
-
-        <!-- Başlık -->
-        <header class="mb-8">
+    <main class="px-6 md:px-8 lg:px-10 py-10 max-w-7xl mx-auto flex-1 pt-28">
+        <!-- Heading -->
+        <header class="mb-8 flex flex-col items-center p-3">
             <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Maritime News</h1>
-            <p class="text-gray-600 mt-1">SRD Energy’den güncel haberler ve yazılar.</p>
+            <p class="text-gray-600 mt-1">Latest updates and articles from SRD Energy.</p>
         </header>
 
-        <!-- Yükleniyor -->
+        <!-- Loading -->
         <div id="loading" class="text-center py-16">
-            <div class="text-lg font-semibold">Yükleniyor…</div>
-            <div class="text-gray-500">İçerik getiriliyor</div>
+            <div class="text-lg font-semibold">Loading…</div>
+            <div class="text-gray-500">Fetching content</div>
         </div>
 
-        <!-- Liste Modu -->
+        <!-- List Mode -->
         <section id="listMode" class="hidden">
             <div id="grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
 
-            <!-- Boş durum -->
+            <!-- Empty State -->
             <div id="emptyState" class="hidden text-center py-16">
-                <p class="text-lg font-medium">Henüz içerik yok</p>
-                <p class="text-gray-500 mt-1">Yakında burada yazılar görünecek.</p>
+                <p class="text-lg font-medium">No articles yet</p>
+                <p class="text-gray-500 mt-1">You’ll see new posts here soon.</p>
             </div>
         </section>
 
-        <!-- Detay Modu -->
+        <!-- Detail Mode -->
         <article id="detailMode" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 hidden">
             <h1 id="postTitle" class="text-3xl font-bold mb-4"></h1>
             <div class="flex flex-wrap gap-3 mb-4">
@@ -161,15 +159,15 @@
             <div id="postContent" class="max-w-none leading-7"></div>
         </article>
 
-        <!-- Bulunamadı -->
+        <!-- Not Found -->
         <div id="notFound" class="text-center py-16 hidden">
-            <h2 class="text-2xl font-bold mb-2">Yazı bulunamadı</h2>
-            <p class="text-gray-500">Bağlantı yanlış olabilir ya da içerik kaldırılmıştır.</p>
+            <h2 class="text-2xl font-bold mb-2">Post not found</h2>
+            <p class="text-gray-500">The link might be wrong or the content was removed.</p>
             <div id="availableSlugs" class="mt-4 text-sm text-gray-600"></div>
-            <a href="blog.html" class="inline-block mt-4 px-4 py-2 rounded-lg border">Blog anasayfasına dön</a>
+            <a href="/" class="inline-block mt-4 px-4 py-2 rounded-lg border">Back to Home</a>
         </div>
 
-        <!-- Hata kutusu -->
+        <!-- Error box -->
         <div id="errBox" class="hidden mt-8 p-4 border border-red-200 bg-red-50 text-red-700 rounded-lg text-sm"></div>
     </main>
 
@@ -178,7 +176,7 @@
         const $ = (id) => document.getElementById(id);
         const qs = (k) => new URLSearchParams(location.search).get(k);
         const norm = (s) => decodeURIComponent(String(s || "")).trim().toLowerCase();
-        const fmtDate = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("tr-TR", { year: "numeric", month: "long", day: "numeric" });
+        const fmtDate = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
         function showError(msg) {
             const box = $("errBox");
@@ -200,24 +198,24 @@
             }
 
             $("grid").innerHTML = posts.map(p => `
-      <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-        <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="block overflow-hidden">
-          <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover group-hover:scale-[1.02] transition" loading="lazy">
-        </a>
-        <div class="p-5">
-          <div class="flex flex-wrap gap-2 mb-3">
-            ${(p.tags || []).map(t => `<span class="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">${t}</span>`).join("")}
+        <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="block overflow-hidden">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover group-hover:scale-[1.02] transition" loading="lazy">
+          </a>
+          <div class="p-5">
+            <div class="flex flex-wrap gap-2 mb-3">
+              ${(p.tags || []).map(t => `<span class="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">${t}</span>`).join("")}
+            </div>
+            <h2 class="text-xl font-semibold leading-snug">
+              <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="hover:underline">${p.title}</a>
+            </h2>
+            <div class="mt-4 flex items-center justify-between">
+              <time class="text-sm text-gray-500">${p.date ? fmtDate(p.date) : ""}</time>
+              <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="text-sm font-medium underline underline-offset-4">Read →</a>
+            </div>
           </div>
-          <h2 class="text-xl font-semibold leading-snug">
-            <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="hover:underline">${p.title}</a>
-          </h2>
-          <div class="mt-4 flex items-center justify-between">
-            <time class="text-sm text-gray-500">${p.date ? fmtDate(p.date) : ""}</time>
-            <a href="blog.html?slug=${encodeURIComponent(p.slug)}" class="text-sm font-medium underline underline-offset-4">Oku →</a>
-          </div>
-        </div>
-      </article>
-    `).join("");
+        </article>
+      `).join("");
         }
 
         function renderDetail(post) {
@@ -231,7 +229,7 @@
             $("postDate").textContent = post.date ? fmtDate(post.date) : "";
             $("postImage").src = post.image || "";
             $("postImage").alt = post.title || "";
-            $("postContent").innerHTML = post.contentHtml || "<p>İçerik bulunamadı.</p>";
+            $("postContent").innerHTML = post.contentHtml || "<p>Content not available.</p>";
 
             const tagsWrap = $("postTags");
             tagsWrap.innerHTML = "";
@@ -249,14 +247,13 @@
             $("detailMode").classList.add("hidden");
             $("notFound").classList.remove("hidden");
             if (Array.isArray(posts) && posts.length) {
-                $("availableSlugs").innerHTML = "Mevcut sluglar: " +
+                $("availableSlugs").innerHTML = "Available slugs: " +
                     posts.map(p => `<a class="underline" href="blog.html?slug=${encodeURIComponent(p.slug)}">${p.slug}</a>`).join(" • ");
             }
         }
 
         (async function init() {
             try {
-                // JSON yolu: blog.html kökteyse data/blogs.json da kökte olmalı
                 const jsonUrl = new URL("data/blogs.json", location.href).toString();
                 const res = await fetch(jsonUrl, { cache: "no-store" });
                 if (!res.ok) throw new Error(`HTTP ${res.status} - ${jsonUrl}`);
@@ -265,17 +262,15 @@
                 const slugRaw = qs("slug");
                 const slug = norm(slugRaw);
 
-                // Slug yoksa LİSTE MODU
                 if (!slug) {
                     renderList(posts);
                     return;
                 }
 
-                // Slug varsa DETAY MODU
                 const post = posts.find(p => norm(p.slug) === slug);
                 if (!post) {
                     renderNotFound(posts);
-                    showError(`Slug bulunamadı: "${slugRaw}".`);
+                    showError(`Slug not found: "${slugRaw}".`);
                     return;
                 }
                 renderDetail(post);
@@ -283,21 +278,14 @@
             } catch (err) {
                 console.error(err);
                 renderNotFound([]);
-                showError("Veri getirilemedi: " + err.message + (location.protocol === "file:" ? " (file:// ile açıldıysa fetch çalışmaz)" : ""));
             }
         })();
     </script>
-
-
-    <!-- MAIN SECTION -->
-
-
-
+    <!-- /MAIN SECTION -->
 
     <!-- FOOTER SECTION-->
-    <footer class="bg-[#006c8b] text-white py-12 mt-20 ">
+    <footer class="bg-[#006c8b] text-white py-12 mt-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-
             <!-- Quick Links -->
             <div>
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
@@ -339,27 +327,36 @@
         <!-- Bottom Bar -->
         <div class="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-200">
             <p>© 2024 SRD Energy Technologies. All Rights Reserved.</p>
-
         </div>
     </footer>
-    <!-- FOOTER SECTION-->
+    <!-- /FOOTER SECTION-->
 
-    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
-    <div class="flex items-center flex-col justify-center text-white bg-black/75 p-3">
-        <div class="flex items-center justify-center text-white border-gray-200 border-t gap-4 text-center text-sm">
-            Designed with ❤️ by <a href="https://devpixel.com.tr" class="hover:underline font-semibold text-clifford"
-                target="_blank"><img src="/assets/images/devpixel-logo.png" alt="" width="100" height="100"></a>
+    <!-- ==================== DEVPIXEL ATTRIBUTION (STAYS AT THE VERY BOTTOM) ==================== -->
+    <div class="text-white bg-black/75 p-3">
+        <div class="flex items-center justify-center border-gray-200 border-t gap-4 text-center text-sm">
+            Designed with ❤️ by
+            <a href="https://devpixel.com.tr" class="hover:underline font-semibold" target="_blank">
+                <img src="/assets/images/devpixel-logo.png" alt="DevPixel" width="100" height="100">
+            </a>
         </div>
-        <div class="flex items-center justify-center gap-4 devPixelSocial mt-2"><a href="https://devpixel.com.tr"
-                class="text-white duration-300 transition hover:text-green-500" target="_blank"><i class="fa fa-link"
-                    aria-hidden="true"></i> </a><a href="https://www.instagram.com/devpixeltech/"
-                class="text-white duration-300 transition hover:text-pink-600" target="_blank"><i
-                    class="fab fa-instagram"></i> </a><a href="https://www.linkedin.com/company/devpixel-tech"
-                class="text-white duration-300 transition hover:text-blue-700" target="_blank"><i
-                    class="fab fa-linkedin-in"></i></a></div>
+        <div class="flex items-center justify-center gap-4 mt-2">
+            <a href="https://devpixel.com.tr" class="text-white duration-300 transition hover:text-green-500"
+                target="_blank" aria-label="DevPixel website">
+                <i class="fa fa-link" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/devpixeltech/"
+                className="text-white duration-300 transition hover:text-pink-600" target="_blank"
+                aria-label="DevPixel Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/devpixel-tech"
+                class="text-white duration-300 transition hover:text-blue-700" target="_blank"
+                aria-label="DevPixel LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
     </div>
-    <!-- ==================== DEVPIXEL ATTRIBITION ==================== -->
-
+    <!-- ==================== /DEVPIXEL ATTRIBUTION ==================== -->
 
 </body>
 
